@@ -1,0 +1,161 @@
+/* Global Box-Sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  background-color: #1f2a44; /* Darker blue background */
+  color: #fff;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add "Subhranshu" as a background text */
+body::before {
+  content: 'Subhranshu';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10rem; /* Increase the font size for background text */
+  color: rgba(255, 255, 255, 0.1); /* Light color with opacity to make it subtle */
+  font-weight: bold;
+  font-family: 'Muli', sans-serif;
+  z-index: -1; /* Behind all other content */
+  letter-spacing: 15px;
+  text-transform: uppercase;
+}
+
+/* Title Styles */
+h2 {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 3rem; /* Increased font size */
+  font-weight: bold; /* Made text bold */
+  color: #f0f0f0;
+}
+
+/* Main Container Styles */
+.container {
+  background-color: #2a3850; /* Lighter dark blue background */
+  border-radius: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  width: 650px; /* Widened the container */
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+/* Result Container Styles */
+.result-container {
+  background-color: #3c4a69; /* Darker gray-blue background for the result box */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 2rem; /* Increased font size */
+  letter-spacing: 1px;
+  padding: 20px 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  height: 80px; /* Increased height */
+  width: 100%;
+}
+
+#result {
+  word-wrap: break-word;
+  max-width: calc(100% - 50px);
+  overflow-y: scroll;
+  height: 100%;
+  font-weight: bold; /* Made text bold */
+  color: #f0f0f0;
+  font-size: 2rem; /* Increased font size */
+}
+
+#result::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+/* Clipboard Button */
+.result-container .btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background-color: #ff7f3f;
+  color: white;
+  font-size: 2rem; /* Increased font size for the icon */
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.result-container .btn:hover {
+  background-color: #ff9b6a;
+}
+
+/* Settings Section */
+.settings {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 1.4rem; /* Increased font size */
+  width: 100%;
+}
+
+.setting label {
+  font-weight: bold; /* Made text bold */
+  color: #f2f2f2;
+  font-size: 1.4rem; /* Increased font size */
+}
+
+.setting input[type="number"],
+.setting input[type="checkbox"] {
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: #3c4a69;
+  color: #fff;
+  font-size: 1.2rem; /* Increased font size */
+  width: 170px;
+}
+
+/* Button to Generate Password */
+.btn-large {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.6rem; /* Increased font size */
+  background-color: #ff7f3f;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-weight: bold; /* Made button text bold */
+}
+
+.btn-large:hover {
+  background-color: #ff9b6a;
+}
